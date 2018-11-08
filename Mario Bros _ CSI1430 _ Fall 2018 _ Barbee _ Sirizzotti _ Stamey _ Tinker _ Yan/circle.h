@@ -1,0 +1,6 @@
+#ifndef CIRCLE_H_INCLUDED
+#define CIRCLE_H_INCLUDED
+
+
+
+#endif // CIRCLE_H_INCLUDED

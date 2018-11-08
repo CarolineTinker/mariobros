@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1541295002 source:e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\line.cpp
+
+1541295058 source:e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\main.cpp
+	<iostream>
+	"headers.h"
+
+1541295150 e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\headers.h
+	"constants.h"
+	"rectangle.h"
+	"point.h"
+	"line.h"
+	"circle.h"
+
+1541295058 e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\constants.h
+
+1541295058 e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\rectangle.h
+
+1541295058 e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\point.h
+
+1541295058 e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\line.h
+
+1541295150 e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\circle.h
+
+1541294958 source:e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\point.cpp
+
+1541294928 source:e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\rectangle.cpp
+
+1541295116 source:e:\csi 1430\mario bros _ csi1430 _ fall 2018 _ barbee _ sirizzotti _ stamey _ tinker _ yan\circle.cpp
+
