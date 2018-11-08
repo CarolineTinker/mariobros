@@ -1,0 +1,69 @@
+# depslib dependency file v1.0
+1541645003 source:h:\mariobros elisabeth part\main.cpp
+	<iostream>
+	<cmath>
+	"point.h"
+	"line.h"
+	"SDL_Plotter.h"
+	"rectangle.h"
+	"circle.h"
+	"headers.h"
+
+1541294668 source:h:\mariobros elisabeth part\sdl_plotter.cpp
+	"SDL_Plotter.h"
+
+1541294637 h:\mariobros elisabeth part\sdl_plotter.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	<string.h>
+	<iostream>
+	<string>
+	<string.h>
+	<map>
+
+1541296494 source:h:\mariobros elisabeth part\circle.cpp
+	"circle.h"
+
+1541294814 h:\mariobros elisabeth part\circle.h
+	"point.h"
+	"color.h"
+	"SDL_Plotter.h"
+	"constants.h"
+
+1541295078 h:\mariobros elisabeth part\point.h
+	<cmath>
+
+1541645911 h:\mariobros elisabeth part\color.h
+
+1541645330 h:\mariobros elisabeth part\constants.h
+
+1541295341 source:h:\mariobros elisabeth part\rectangle.cpp
+	"rectangle.h"
+
+1541295308 h:\mariobros elisabeth part\rectangle.h
+	"point.h"
+	"color.h"
+	"SDL_Plotter.h"
+
+1541295223 h:\mariobros elisabeth part\line.h
+	<ostream>
+	"point.h"
+	"SDL_Plotter.h"
+	"color.h"
+
+1541644903 source:h:\mariobros elisabeth part\enemies.cpp
+	"headers.h"
+
+1541643872 h:\mariobros elisabeth part\headers.h
+	"constants.h"
+	"rectangle.h"
+	"point.h"
+	"line.h"
+	"circle.h"
+	"SDL_Plotter.h"
+	"color.h"
+	"enemies.h"
+
+1541643832 h:\mariobros elisabeth part\enemies.h
+	"headers.h"
+

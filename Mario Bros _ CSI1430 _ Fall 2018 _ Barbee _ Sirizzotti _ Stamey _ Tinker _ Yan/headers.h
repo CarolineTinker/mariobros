@@ -8,6 +8,6 @@
 #include "circle.h"
 #include "SDL_Plotter.h"
 #include "color.h"
-#include "LettersDisplay.h"
+#include "enemies.h"
 
 #endif // HEADERS_H_INCLUDED

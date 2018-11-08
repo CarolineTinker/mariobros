@@ -1,22 +1,18 @@
-#ifndef CIRCLE_H_INCLUDED
-#define CIRCLE_H_INCLUDED
+#ifndef ENEMIES_H_INCLUDED
+#define ENEMIES_H_INCLUDED
 
-#include "point.h"
-#include "color.h"
-#include "SDL_Plotter.h"
-#include "constants.h"
+#include "headers.h"
 
-class circle
+class enemies
 {
     private:
         color clr;
         point center, prev_center;
         int radius;
         int speed;
-
     public:
-        circle();
-        circle(point, int, color = BLACK);
+        enemies();
+        enemies(point, int, color = RED);
 
         point getCenter();
         int getRadius();
@@ -33,4 +29,4 @@ class circle
         void move(DIRECTION);
 };
 
-#endif // CIRCLE_H_INCLUDED
+#endif // ENEMIES_H_INCLUDED
