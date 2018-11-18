@@ -9,5 +9,6 @@
 #include "SDL_Plotter.h"
 #include "color.h"
 #include "enemies.h"
+#include "font.h"
 
 #endif // HEADERS_H_INCLUDED
