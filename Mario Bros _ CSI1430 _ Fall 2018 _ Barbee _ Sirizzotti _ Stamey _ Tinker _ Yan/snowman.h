@@ -21,18 +21,11 @@ class snowman
         point p5, p6; // sunglasses frame
         point pc1,pc2;       //Cigarettes
         color c;
-        int changeX = 0, changeY = 0;
+
         //lines
         double slope = 1;
         int lineX;
-        bool moveRight = false;
-        bool moveLeft = false;
-        bool moveUp = false;
-        bool moveDown = false;
-        bool eraseLeft = false;
-        bool eraseLeft2 = false;
-        bool eraseRight = false;
-        bool eraseRight2 = false;
+
         int timeSmoke = 0;
         int prev_lineX;
         int prev_y;
@@ -46,6 +39,16 @@ class snowman
         point eraser3, eraser4; // erase right
 
     public:
+        double eraseSmoke = 1.4;
+        int changeX = 0, changeY = 0;
+        bool moveRight = false;
+        bool moveLeft = false;
+        bool moveUp = false;
+        bool moveDown = false;
+        bool eraseLeft = false;
+        bool eraseLeft2 = false;
+        bool eraseRight = false;
+        bool eraseRight2 = false;
         // circle
         snowman();
         snowman(point, int, color = BLACK);
