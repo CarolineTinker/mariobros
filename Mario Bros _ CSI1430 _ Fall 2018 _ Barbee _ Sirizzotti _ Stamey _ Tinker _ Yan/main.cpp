@@ -6,6 +6,7 @@
 #include "circle.h"
 #include "snowman.h"
 #include "enemies.h"
+#include "background.h"
 
 using namespace std;
 
@@ -18,6 +19,9 @@ int main(int argc, char** argv)
     SDL_Plotter g(750, 750);
     snowman sman; // snow man is called sman
     sman.setSpeed(10);
+    
+    background b;
+    b.drawBackground(g);
 
 //    rectangle r1, r2(point(25, 25), point(300, 150), RED);
 //    int delay = 100;
