@@ -13,7 +13,7 @@ class snowman
         color clr;
         point center;
         int radius;
-        int speed;
+        double speed;
         point prev_center;
         // rectangles
         point p1, p2; // eye 1
@@ -21,7 +21,7 @@ class snowman
         point p5, p6; // sunglasses frame
         point pc1,pc2;       //Cigarettes
         color c;
-
+        double delay = 10;
         //lines
         double slope = 1;
         int lineX;
@@ -32,23 +32,18 @@ class snowman
 
         // color
         color background;
-//        color cigarette;
 
-        //eraser
-        point eraser1, eraser2; // erase left
-        point eraser3, eraser4; // erase right
 
     public:
         double eraseSmoke = 1.4;
-        int changeX = 0, changeY = 0;
+        double changeX = 0, changeY = 0;
         bool moveRight = false;
         bool moveLeft = false;
         bool moveUp = false;
         bool moveDown = false;
-        bool eraseLeft = false;
-        bool eraseLeft2 = false;
-        bool eraseRight = false;
-        bool eraseRight2 = false;
+        bool rightJump = false;
+        bool leftJump = false;
+
         // circle
         snowman();
         snowman(point, int, color = BLACK);
@@ -69,6 +64,8 @@ class snowman
         void draw(SDL_Plotter& g);
         void erase(SDL_Plotter &g);
         void move(DIRECTION);
+        void jump(SDL_Plotter &g);
+        void movement(SDL_Plotter &g);
 
         // rectangles
         snowman(point a, point b, color = BLACK);

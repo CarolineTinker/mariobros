@@ -86,6 +86,7 @@ void snowman::setChangeY(int a){
 }
 void snowman::draw(SDL_Plotter& g)
 {
+
     background.R = 255;
     background.G = 255;
     background.B = 255;
@@ -210,10 +211,28 @@ void snowman::draw(SDL_Plotter& g)
                 g.plotPixel(lineX+changeX + 2, y+2 + changeY,  255, 0, 0);
             }
 
-    }
 
+    if(moveRight and !moveLeft){
+        for (double x = -eraseSmoke; x <= eraseSmoke; x ++){
+            for (double y = -eraseSmoke; y <= eraseSmoke; y++){
+                if(point(0,0).distance(point(x,y)) <= eraseSmoke){
+                    // put a guard here
+                    g.plotPixel(center.x + x + 25, center.y + y - 39 , 0, 0, 0); //light blue color
+                }
+            }
+        }
+        for (double x = -eraseSmoke; x <= eraseSmoke; x ++){
+            for (double y = -eraseSmoke; y <= eraseSmoke; y++){
+                if(point(0,0).distance(point(x,y)) <= eraseSmoke){
+                    // put a guard here
+                    g.plotPixel(center.x + x + 20, center.y + y - 39 , 0, 0, 0); //light blue color
+                }
+            }
+        }
+    }
+    }
         // when moving to the left
-        if(moveLeft){
+        if(moveLeft and !moveRight){
             for (double y = YSTART - BODY - 4; y < YSTART -BODY - 4 + 6; y+=0.5)
             {
                 lineX = slope * y - YSTART + XSTART + 22;
@@ -231,8 +250,7 @@ void snowman::draw(SDL_Plotter& g)
                 g.plotPixel(lineX+changeX - 1.5, y+1.5 + changeY,  255, 0, 0);
                 g.plotPixel(lineX+changeX - 2, y+2 + changeY,  255, 0, 0);
             }
-        }
-        if(moveLeft){
+
             for (double x = -eraseSmoke; x <= eraseSmoke; x ++){
                 for (double y = -eraseSmoke; y <= eraseSmoke; y++){
                     if(point(0,0).distance(point(x,y)) <= eraseSmoke){
@@ -251,27 +269,9 @@ void snowman::draw(SDL_Plotter& g)
             }
         }
 
-
-    if(moveRight){
-        for (double x = -eraseSmoke; x <= eraseSmoke; x ++){
-            for (double y = -eraseSmoke; y <= eraseSmoke; y++){
-                if(point(0,0).distance(point(x,y)) <= eraseSmoke){
-                    // put a guard here
-                    g.plotPixel(center.x + x + 25, center.y + y - 39 , 0, 0, 0); //light blue color
-                }
-            }
-        }
-        for (double x = -eraseSmoke; x <= eraseSmoke; x ++){
-            for (double y = -eraseSmoke; y <= eraseSmoke; y++){
-                if(point(0,0).distance(point(x,y)) <= eraseSmoke){
-                    // put a guard here
-                    g.plotPixel(center.x + x + 20, center.y + y - 39 , 0, 0, 0); //light blue color
-                }
-            }
-        }
-
 }
-}
+
+
 void snowman::erase(SDL_Plotter &g){
 
 
@@ -338,11 +338,19 @@ void snowman::move(DIRECTION d){
 
     switch (d){
         case UP:
-
 //                    center.y -= speed;
 //                    changeY -= speed;
+                    if(moveRight){
+                        rightJump = true;
+                    }
+                    if(moveLeft){
+                        leftJump = true;
+                    }
                     moveUp = true;
                     moveDown = false;
+//                    moveRight = false;
+//                    moveLeft = false;
+
                     break;
         case RIGHT: center.x += speed;
                     changeX += speed;
@@ -367,6 +375,144 @@ void snowman::move(DIRECTION d){
 ////                    moveDown =true;
 //                    moveUp = false;
                     break;
-
-        }
+    }
 }
+void snowman::jump(SDL_Plotter &g){
+            moveLeft = false;
+            moveRight = false;
+
+        for(double i=15; i > 0; i-=1){
+            center.y = center.y - i;
+            center.x = center.x;
+            changeY -= i;
+            if(center.x > 749 - BODY - 3){
+                center.x = 749 - BODY - 3;
+                changeX = 378;
+            }
+            if(center.x < BODY + 3){
+                center.x = BODY + 3;
+                changeX = 431;
+            }
+            if(center.y > 700 - BODY - 10){
+            center.y = 700 - BODY  ;
+            changeY = 277;
+            }
+            draw(g);
+            g.Sleep(delay*1.5);
+            g.update();
+            if (!g.kbhit())
+            {
+            switch(g.getKey())
+            {
+                case RIGHT_ARROW: moveRight = true;
+                    center.x += speed/2;
+                    changeX += speed/2;
+                          break;
+                case LEFT_ARROW: //move(LEFT);
+                                moveLeft = true;
+                    center.x -= speed/2;
+                    changeX -= speed/2;
+                          break;
+            }
+//            center.y = center.y - i;
+//            center.x = center.x;
+//            changeY -= i;
+
+            }
+    }
+
+
+    for(double i = 0; i <= 15; i+=1){
+        center.y = center.y + i;
+        changeY += i;
+        draw(g);
+        g.Sleep(delay*1.5);
+        g.update();
+        if(center.x > 749 - BODY - 3){
+            center.x = 749 - BODY - 3;
+            changeX = 378;
+        }
+        if(center.x < BODY + 3){
+            center.x = BODY + 3;
+            changeX = 431;
+        }
+        if(center.y > 700 - BODY - 10){
+            center.y = 700 - BODY  ;
+            changeY = 277;
+        }
+            if (!g.kbhit())
+            {
+                switch(g.getKey())
+                {
+                    case RIGHT_ARROW: // move(RIGHT);
+                        moveRight= true;
+                        center.x += speed/2;
+                        changeX += speed/2;
+                              break;
+                    case LEFT_ARROW:// move(LEFT);
+                        moveLeft = true;
+                        center.x -= speed/2;
+                        changeX -= speed/2;
+                              break;
+                }
+//            if(moveRight){
+//                center.x +=speed;
+//                changeX += speed;
+//            }
+//            if(moveLeft){
+//                center.x -= speed;
+//                changeX -= speed;
+//            }
+        }
+    }
+}
+
+void snowman::movement(SDL_Plotter &g){
+
+        switch(g.getKey())
+        {
+            case RIGHT_ARROW: move(RIGHT);
+                      break;
+            case LEFT_ARROW: move(LEFT);
+                      break;
+            case UP_ARROW: move(UP);
+                        jump(g);
+                    break;
+        }
+        if(center.x > 749 - BODY - 3){
+            center.x = 749 - BODY - 3;
+            changeX = 378;
+        }
+        if(center.x < BODY + 3){
+            center.x = BODY + 3;
+            changeX = 431;
+        }
+        if(center.y > 700 - BODY - 10){
+            center.y = 700 - BODY  ;
+            changeY = 277;
+        }
+
+//            if(center.y < 350 and center.x <200){
+//                        for(double i = 0; i <= 350 - sman.getCenter().y; i++){
+//                            sman.moveDown = true;
+//                            newCenter.x = sman.getCenter().x;
+//                            newCenter.y = sman.getCenter().y + i;
+//                            sman.setCenter(newCenter);
+//                            sman.changeY += i;
+//                            sman.draw(g);
+//                            g.Sleep(delay*2);
+//                            g.update();
+//                            }
+//                        }
+                 if(center.y < 700 - BODY){
+                    for(double i = 0; i <= 700 - center.y - BODY; i++){
+                        moveDown = true;
+                        center.y += i;
+                        changeY += i;
+                        draw(g);
+                        g.Sleep(delay*2);
+                        g.update();
+                        }
+        }
+    }
+

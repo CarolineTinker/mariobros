@@ -25,6 +25,8 @@ struct color
     }
 };
 
+const color LIGHTBLUE(35, 255, 233);
+const color WHITE1(255, 255, 255);
 const color BLACK(0, 0, 0);
 const color RED(255, 0, 0);
 const color GREEN(0, 255, 0);
@@ -32,5 +34,6 @@ const color BLUE(0, 0, 255);
 const color SNOWMAN(135, 204, 251);
 const color DEEP_ORANGE(255, 91, 26);
 const color ORANGE(221, 116, 19);
+const color BACKGROUND(27, 35, 141);
 
 #endif // COLOR_H_INCLUDED

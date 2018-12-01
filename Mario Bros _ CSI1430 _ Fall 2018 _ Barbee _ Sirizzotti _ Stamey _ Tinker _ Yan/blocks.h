@@ -5,7 +5,6 @@
  Landon Stamey
  Caroline Tinker
  Zhenbo Yan
-
  Assignment Title: Group Project
  Assignment Description: Mario Bros
  Due Date: 12/3/18
@@ -37,7 +36,7 @@ class block{
          precondition: snowman and block exist
          postcondition: coin count changes from 1 to 0
         */
-        void collide(snowman s);
+        //void collide(snowman s);
 
 
         /*
