@@ -1,0 +1,132 @@
+# depslib dependency file v1.0
+1542503006 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\line.cpp
+
+1543423186 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\main.cpp
+	<iostream>
+	"headers.h"
+
+1543423574 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\headers.h
+	<iostream>
+	<iomanip>
+	<fstream>
+	<string>
+	<cstdlib>
+	<cmath>
+	<ctime>
+	"background.h"
+	"blocks.h"
+	"chimney.h"
+	"circle.h"
+	"color.h"
+	"constants.h"
+	"enemies.h"
+	"fireplace.h"
+	"font.h"
+	"line.h"
+	"point.h"
+	"rectangle.h"
+	"SDL_Plotter.h"
+	"snowman.h"
+
+1543422252 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\background.h
+	"headers.h"
+	"blocks.h"
+	"fireplace.h"
+	"chimney.h"
+	"point.h"
+	"rectangle.h"
+
+1543423560 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\blocks.h
+	"rectangle.h"
+	"point.h"
+	"snowman.h"
+
+1542503006 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\rectangle.h
+	"point.h"
+	"color.h"
+	"SDL_Plotter.h"
+
+1543597180 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\point.h
+	<cmath>
+
+1543423928 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\color.h
+
+1543423210 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\sdl_plotter.h
+	<SDL2/SDL.h>
+	<SDL2/SDL_mixer.h>
+	<string.h>
+	<iostream>
+	<string>
+	<string.h>
+	<map>
+
+1543422252 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\fireplace.h
+	"rectangle.h"
+	"color.h"
+	"SDL_Plotter.h"
+	"snowman.h"
+	"point.h"
+
+1543597034 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\snowman.h
+	"color.h"
+	"point.h"
+	"SDL_Plotter.h"
+	"constants.h"
+	"rectangle.h"
+
+1542503006 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\constants.h
+
+1543423746 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\chimney.h
+	"rectangle.h"
+	"point.h"
+	"SDL_Plotter.h"
+	"color.h"
+	"snowman.h"
+
+1542503006 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\circle.h
+	"point.h"
+	"color.h"
+	"SDL_Plotter.h"
+	"constants.h"
+
+1542503006 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\enemies.h
+	"headers.h"
+
+1543597316 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\font.h
+	"color.h"
+	"point.h"
+	"SDL_Plotter.h"
+	<fstream>
+
+1542504282 e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\line.h
+	"headers.h"
+	"point.h"
+	"color.h"
+
+1543423666 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\chimney.cpp
+	"chimney.h"
+
+1542503006 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\circle.cpp
+	"circle.h"
+
+1543422252 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\fireplace.cpp
+	"fireplace.h"
+
+1542503006 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\point.cpp
+
+1542503006 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\rectangle.cpp
+	"rectangle.h"
+
+1542503006 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\sdl_plotter.cpp
+	"SDL_Plotter.h"
+
+1543422252 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\blocks.cpp
+	"headers.h"
+	"blocks.h"
+
+1542503006 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\enemies.cpp
+	"headers.h"
+
+1543422252 source:e:\engineering\csi 1430\mario_group\mariobros\final project\group_final\background.cpp
+	"background.h"
+

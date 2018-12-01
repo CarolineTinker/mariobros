@@ -4,6 +4,7 @@
 #include "color.h"
 #include "point.h"
 #include "SDL_Plotter.h"
+#include <fstream>
 
 using namespace std;
 
@@ -15,6 +16,7 @@ private:
 
 public:
 
+    font();
     font(int, color);
     font(color);
 
@@ -24,7 +26,7 @@ public:
     color getColor();
     int getSize();
 
-    void draw(char[], SDL_Plotter&, point);
+    void draw(string filename, SDL_Plotter& g, point p);
 
 
 
